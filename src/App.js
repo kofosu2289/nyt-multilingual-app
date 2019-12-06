@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { Router, Route, Link } from 'react-router-dom';
+import { createBrowserHistory as createHistory } from 'history';
+import { useTranslation } from 'react-i18next';
 import './App.css';
 
-function App() {
+const history = createHistory();
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Router history={history}>
+      </Router>
     </div>
-  );
+  )
 }
 
 export default App;
